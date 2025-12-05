@@ -1,62 +1,121 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 💸 DailyExpenseManager
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A simple **CRUD application** to manage your daily expenses. Built with **Laravel**, this project helps you track, categorize, and report your personal expenses effortlessly.
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 🚀 Features
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+* User Authentication (Register, Login, Password Reset, Email Verification)
+* CRUD operations for expenses
+* Expense categories: **Food, Transport, Shopping, Others**
+* Dashboard with monthly summary and remaining budget
+* Expense reports
+* RESTful API endpoints for integration
+* Local environment auto-setup for demo data
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## 🖥️ Screenshots
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+| Dashboard                       | Add Expense                       | Expense List                       | Expense Report                       |
+| ------------------------------- | --------------------------------- | ---------------------------------- | ------------------------------------ |
+| ![Dashboard](screenshots/1.png) | ![Add Expense](screenshots/2.png) | ![Expense List](screenshots/3.png) | ![Expense Report](screenshots/4.png) |
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+---
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## ⚡ Installation
 
-## Laravel Sponsors
+1. Clone the repository:
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+```bash
+git clone https://github.com/Ahsanjuly29/DailyExpenses.git
+cd DailyExpenseManager
+```
 
-### Premium Partners
+2. Install dependencies:
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+```bash
+composer install
+npm install && npm run dev
+```
 
-## Contributing
+3. Set up environment variables:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+```bash
+cp .env.example .env
+php artisan key:generate
+```
 
-## Code of Conduct
+4. Run migrations:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+```bash
+php artisan migrate
+```
 
-## Security Vulnerabilities
+5. Start the development server:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+```bash
+php artisan serve
+```
 
-## License
+---
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-# DailyExpenses
+## 📝 Usage
+
+1. Register or log in.
+2. Access the dashboard to see your monthly targets and expense summary.
+3. Add, edit, or delete expenses under different categories.
+4. Generate reports to track your spending trends.
+
+---
+
+## 🔗 API Endpoints
+
+* `/api-company-data` → Company CRUD
+* `/api-investment-data` → Investment CRUD
+* `/api-investment-log-data` → Investment Logs
+* `/api-job-earning-data` → Job Earnings
+* Authenticated via **Laravel Sanctum**
+
+---
+
+## 👨‍💻 Tech Stack
+
+* PHP 8.x
+* Laravel 12
+* MySQL / SQLite
+* Blade Templates
+* Tailwind CSS (optional)
+
+---
+
+## 📂 Folder Structure(Example)
+
+```
+app/
+├─ Http/
+│  ├─ Controllers/
+│  │  ├─ ExpenseController.php
+│  │  └─ ...
+├─ Models/
+│  └─ Expense.php
+routes/
+├─ web.php
+├─ api.php
+├─ auth.php
+resources/
+├─ views/
+public/
+screenshots/
+├─ 1.png
+├─ 2.png
+├─ 3.png
+├─ 4.png
+```
+
+---
+
+## ✅ License
+
+open for all
