@@ -20,7 +20,7 @@ A simple **CRUD application** to manage your daily expenses. Built with **Larave
 
 | Dashboard                       | Add Expense                       | Expense List                       | Expense Report                       |
 | ------------------------------- | --------------------------------- | ---------------------------------- | ------------------------------------ |
-| ![Dashboard](screenshots/1.png) | ![Add Expense](screenshots/2.png) | ![Expense List](screenshots/3.png) | ![Expense Report](screenshots/4.png) |
+| ![Dashboard](Screenshots/1.png) | ![Add Expense](Screenshots/2.png) | ![Expense List](Screenshots/3.png) | ![Expense Report](Screenshots/4.png) |
 
 ---
 
@@ -107,7 +107,7 @@ routes/
 resources/
 ├─ views/
 public/
-screenshots/
+Screenshots/
 ├─ 1.png
 ├─ 2.png
 ├─ 3.png
